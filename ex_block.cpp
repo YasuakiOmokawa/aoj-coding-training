@@ -4,8 +4,19 @@ using namespace std;
 
 int main()
 {
-  auto x = 1 + 1;
-  cout << x << "\n";
+  // 複合文開始
+  {
+    cout << "hello\n";
+    cout << "hello\n";
+  }
+  // 複合文終了
 
-  ;
+  // 別の複合文
+  {
+    cout << "world\n";
+  }
+
+  // 空の複合文
+  {
+  }
 }
