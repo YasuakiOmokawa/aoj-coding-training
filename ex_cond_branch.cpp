@@ -4,15 +4,9 @@ using namespace std;
 
 int main()
 {
-  auto a = 12345 + 6789;
-  auto b = 8073 * 132 / 5;
-
-  if (a < b)
+  if (1 < 2)
   {
-    cout << b << " is b\n";
-  }
-  else
-  {
-    cout << a << "is a\n";
+    std::cout << "yes!\n";
+    std::cout << "yes!\n";
   }
 }
