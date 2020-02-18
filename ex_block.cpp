@@ -4,19 +4,20 @@ using namespace std;
 
 int main()
 {
-  // 複合文開始
+  auto x = 0;
   {
-    cout << "hello\n";
-    cout << "hello\n";
+    auto x = 1;
+    {
+      auto x = 2;
+      // 2
+      std::cout << x << "\n";
+    }
+    // 1
+    std::cout << x << "\n";
+    x = 42;
+    // 42
+    std::cout << x << "\n";
   }
-  // 複合文終了
-
-  // 別の複合文
-  {
-    cout << "world\n";
-  }
-
-  // 空の複合文
-  {
-  }
+  // 0
+  std::cout << x << "\n";
 }
