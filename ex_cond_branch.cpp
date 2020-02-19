@@ -4,27 +4,11 @@ using namespace std;
 
 int main()
 {
-  auto cat = "cat";
-  auto dog = "dog";
+  std::cout << std::boolalpha;
 
-  if (cat < dog)
-  {
-    cout << "cat is smaller\n";
-  }
-  else
-  {
-    cout << "dog is smaller\n";
-  }
+  // false
+  std::cout << !true << "\n";
 
-  auto longcat = "longcat";
-
-  if (longcat > cat)
-  {
-    cout << "Longcat is long\n";
-  }
-  else
-  {
-    cout << "Longcat isn't that long. Sign\n";
-  }
-
+  // true
+  std::cout << !false << "\n";
 }
