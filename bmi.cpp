@@ -5,9 +5,14 @@ using namespace std;
 int main()
 {
   // 身長1.63m
-  double height = 1.63;
+  double height{};
+  cout << "height<m>";
+  cin >> height;
+
   // 体重73kg
-  double mass = 73.0;
+  double mass{};
+  cout << "mass<kg>";
+  cin >> mass;
 
   // BMIの計算
   double bmi = mass / (height * height);
