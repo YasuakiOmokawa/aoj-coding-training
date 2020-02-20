@@ -2,15 +2,10 @@
 #include <algorithm>
 using namespace std;
 
+// C++では、bool型と整数型の変換は暗黙に行われてしまうので注意が必要
 int main()
 {
   cout << boolalpha;
-  auto print = [](auto b) {
-    cout << b << "\n";
-  };
-
-  print(false && false);
-  print(false && true);
-  print(true && false);
-  print(true && true);
+  bool b = true < false;
+  cout << b << "\n";
 }
