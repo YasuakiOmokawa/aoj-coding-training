@@ -4,12 +4,12 @@ using namespace std;
 
 int main()
 {
-  // 身長1.63m
+  // 身長
   double height{};
   cout << "height<m>";
   cin >> height;
 
-  // 体重73kg
+  // 体重
   double mass{};
   cout << "mass<kg>";
   cin >> mass;
