@@ -10,5 +10,6 @@ int main()
 
   cin >> height >> mass;
 
-  cout << mass / (height * height) << "\n";
+  cout << height / 100.0 << "\n"
+       << mass;
 }
