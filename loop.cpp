@@ -2,23 +2,26 @@
 #include <algorithm>
 using namespace std;
 
-int input()
+void hello_n(int n)
 {
-  cout << ">";
-  int x{};
-  cin >> x;
-  return x;
-}
+  if (n < 0)
+  {
+    return;
+  }
+
+  int i = 0;
+loop:
+  if (i != n)
+  {
+    cout << "hello\n";
+    i++;
+    goto loop;
+  }
+};
 
 int main()
 {
-  int sum = 0;
-loop:
-  int x = input();
-  if (x != 0)
-  {
-    sum = sum + x;
-    cout << sum << "\n";
-    goto loop;
-  }
+  int n{};
+  cin >> n;
+  hello_n(n);
 }
