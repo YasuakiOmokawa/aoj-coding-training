@@ -14,7 +14,11 @@ int main()
 {
   int sum = 0;
 loop:
-  sum = sum + input();
-  cout << sum << "\n";
-  goto loop;
+  int x = input();
+  if (x != 0)
+  {
+    sum = sum + x;
+    cout << sum << "\n";
+    goto loop;
+  }
 }
