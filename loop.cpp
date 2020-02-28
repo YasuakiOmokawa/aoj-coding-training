@@ -2,22 +2,19 @@
 #include <algorithm>
 using namespace std;
 
-int input()
-{
-  cout << ">";
-  int x{};
-  cin >> x;
-  return x;
-}
-
 int main()
 {
-  int sum = 0;
-  int x{};
-
-  while ((x = input()) != 0)
+  int a = 1;
+  while (a <= 9)
   {
-    sum += x;
-    cout << sum << "\n";
+
+    int b = 1;
+    while (b <= 9)
+    {
+      cout << a * b << "\t";
+      ++b;
+    }
+    cout << "\n";
+    ++a;
   }
 }
