@@ -4,17 +4,12 @@ using namespace std;
 
 int main()
 {
-  int a = 1;
-  while (a <= 9)
+  for (int a = 1; a <= 9; a++)
   {
-
-    int b = 1;
-    while (b <= 9)
+    for (int b = 1; b <= 9; b++)
     {
       cout << a * b << "\t";
-      ++b;
     }
     cout << "\n";
-    ++a;
   }
 }
