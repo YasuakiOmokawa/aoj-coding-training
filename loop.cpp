@@ -2,10 +2,22 @@
 #include <algorithm>
 using namespace std;
 
+int input()
+{
+  cout << ">";
+  int x{};
+  cin >> x;
+  return x;
+}
+
 int main()
 {
-  auto hello = []() { cout << "hello\n"; };
+  int sum = 0;
+  int x{};
 
-  while (true)
-    hello();
+  while ((x = input()) != 0)
+  {
+    sum += x;
+    cout << sum << "\n";
+  }
 }
