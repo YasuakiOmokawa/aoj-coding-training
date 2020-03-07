@@ -7,7 +7,7 @@ int main()
 {
   vector<int> v;
 
-  for (int i = 0; i != 1000; ++i)
+  for (int iota = 0; iota != 1000; ++i)
   {
     v.push_back(i);
   }
