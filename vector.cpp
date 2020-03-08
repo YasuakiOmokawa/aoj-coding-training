@@ -3,29 +3,14 @@
 #include <vector>
 using namespace std;
 
-int input()
-{
-  int x{};
-  cout << "> ";
-  cin >> x;
-  return x;
-}
-
 int main()
 {
-  vector<int> v;
-  int x{};
+  // item 1,2,3
+  vector<int> v = {1, 2, 3};
 
-  // input
-  while ((x = input()) != 0)
-  {
-    v.push_back(x);
-  }
+  auto x = v.at(0); // 1
+  auto y = v.at(1); // 2
+  auto z = v.at(2); // 3
 
-  // output
-  for (size_t index = 0; index != v.size(); ++index)
-  {
-    cout << v.at(index) << " ";
-  }
-  cout << "\n";
+  cout << x << y << z << "\n";
 }
