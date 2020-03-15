@@ -28,4 +28,10 @@ int main()
   }
 
   // 実行したあと
+  cout << "\n";
+
+  for (size_t index = 0, size = v.size(); index != size; ++index)
+  {
+    cout << v.at(index) << " ";
+  }
 }
