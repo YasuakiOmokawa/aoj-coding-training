@@ -8,12 +8,11 @@ int main()
   vector<int> v = {8, 3, 7, 4, 2, 9, 3};
   size_t size = v.size();
 
+  // 先頭をずらすループ
   for (size_t head = 0; head != size; ++head)
   {
-    // 現在の先頭であるmin番目を、仮の最小の要素とみなすのでhead
     size_t min = head;
-
-    // 現在の先頭の次の要素から探すので、head + 1
+    // 現在の要素の範囲から最小値を見つけるループ
     for (size_t index = head + 1; index != size; ++index)
     {
       if (v.at(index) < v.at(min))
@@ -22,6 +21,11 @@ int main()
 
     cout << v.at(min) << " ";
 
-    // 先頭と交換
+    // 最小値を先頭と交換
+    auto temp = v.at(head);
+    v.at(head) = v.at(min);
+    v.at(min) = temp;
   }
+
+  // 実行したあと
 }
