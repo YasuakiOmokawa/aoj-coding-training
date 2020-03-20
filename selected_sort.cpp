@@ -18,8 +18,9 @@ int main()
     }
 
     auto temp = v.at(head);
+
     v.at(head) = v.at(min);
-    v.at(min) = v.at(head);
+    v.at(min) = temp;
   }
 
   for (size_t i = 0; i != size; ++i)
