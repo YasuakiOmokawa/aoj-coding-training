@@ -6,8 +6,6 @@ using namespace std;
 // 1 * 2 * 3 * .. * n を計算するプログラム
 int main()
 {
-  cout << "standard output\n";
-  cerr << "standard error output\n";
   int n{};
   cin >> n;
   if (n < 1)
@@ -19,7 +17,7 @@ int main()
     sum *= i;
 
     // debug
-    cout << "debug: " << i << ", " << sum << "\n";
+    cerr << "debug: " << i << ", " << sum << "\n";
     // debug
   }
 

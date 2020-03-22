@@ -1,1 +1,2 @@
-standard error output
+debug: 2, 2
+debug: 3, 6
