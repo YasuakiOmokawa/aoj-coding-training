@@ -6,6 +6,6 @@ using namespace std;
 int main()
 {
   cout
-      << numeric_limits<int>::min() << "\n"
-      << numeric_limits<int>::max();
+      << numeric_limits<unsigned int>::min() << "\n"
+      << numeric_limits<unsigned int>::max();
 }
