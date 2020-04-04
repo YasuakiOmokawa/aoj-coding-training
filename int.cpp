@@ -5,6 +5,8 @@ using namespace std;
 
 int main()
 {
-  short x = 40000;
-  cout << x << "\n";
+  int x = 123;
+  short y = static_cast<short>(x);
+
+  cout << y << "\n";
 }
