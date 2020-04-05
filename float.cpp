@@ -5,13 +5,7 @@ using namespace std;
 
 int main()
 {
-  float a = 10000.0;
-
-  float b = 0.0001;
-
-  float c = a + b;
-
-  cout << a << "\n"
-       << b << "\n"
-       << c;
+  cout << "float: " << numeric_limits<float>::digits10 << "\n"
+       << "double: " << numeric_limits<double>::digits10 << "\n"
+       << "long double: " << numeric_limits<long double>::digits10 << "\n";
 }
