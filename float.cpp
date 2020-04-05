@@ -5,7 +5,12 @@ using namespace std;
 
 int main()
 {
-  cout << "float: " << numeric_limits<float>::epsilon() << "\n"
-       << "double: " << numeric_limits<double>::epsilon() << "\n"
-       << "long double: " << numeric_limits<long double>::epsilon() << "\n";
+  double a = 1.233456789;
+
+  // 変換
+  float b = a;
+  // 変換
+  long double c = a;
+
+  cout << a << " " << b << " " << c << "\n";
 }
