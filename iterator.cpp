@@ -9,10 +9,11 @@ int main()
 
   auto i = begin(v);
 
-  int x = *i;
-  cout << x << "\n";
-
-  *i = 0;
+  cout << *i; // dereference?
+  ++i;
+  cout << *i;
+  ++i;
+  cout << *i;
 
   for (auto a : v)
   {
