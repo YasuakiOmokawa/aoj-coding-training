@@ -5,10 +5,17 @@ using namespace std;
 
 int main()
 {
-  std::vector<int> v = {1, 2, 3, 4, 5};
+  vector<int> v = {1, 2, 3, 4, 5};
 
-  int x = v.at(2);
-  v.at(2) = 0;
+  auto i = begin(v);
 
-  cout << v.at(0) << "\n";
+  int x = *i;
+  cout << x << "\n";
+
+  *i = 0;
+
+  for (auto a : v)
+  {
+    cout << a << endl;
+  }
 }
