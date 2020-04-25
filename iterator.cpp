@@ -7,23 +7,18 @@ int main()
 {
   vector<int> v = {1, 2, 3, 4, 5};
 
-  auto x = begin(v);
-  auto y = x;
+  auto i = end(v);
 
-  // x, yは0番目の要素を指す
+  cout << "next of end -> " << *i << "\n";
 
-  bool b1 = (x == y);
-  bool b2 = (x != y);
-
-  ++x; // 1番目の要素を指す
-
-  bool b3 = (x == y);
-  bool b4 = (x != y);
-
-  vector<bool> bv = {b1, b2, b3, b4};
-
-  for (auto a : bv)
+  for (auto a : v)
   {
     cout << a << endl;
   }
+
+  cout << "check that next of end\n";
+  --i;
+  cout << "before -> " << *i << "\n";
+  ++i;
+  cout << "next -> " << *i << "\n";
 }
