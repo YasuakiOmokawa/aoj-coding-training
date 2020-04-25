@@ -3,22 +3,16 @@
 #include <vector>
 using namespace std;
 
+auto output_all = [](auto first, auto last) {
+  for (auto iter = first; iter != last; ++iter)
+  {
+    cout << *iter << "\n";
+  }
+};
+
 int main()
 {
-  vector<int> v = {1, 2, 3, 4, 5};
+  vector<int> v = {1, 2, 3, 4, 5, 6};
 
-  auto i = end(v);
-
-  cout << "next of end -> " << *i << "\n";
-
-  for (auto a : v)
-  {
-    cout << a << endl;
-  }
-
-  cout << "check that next of end\n";
-  --i;
-  cout << "before -> " << *i << "\n";
-  ++i;
-  cout << "next -> " << *i << "\n";
+  output_all(begin(v), end(v));
 }
