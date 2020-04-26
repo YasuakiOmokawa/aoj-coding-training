@@ -12,7 +12,7 @@ auto output_all = [](auto first, auto last) {
 
 int main()
 {
-  vector<int> v = {1, 2, 3, 4, 5, 6};
+  istreambuf_iterator<int> first(cin), last;
 
-  output_all(begin(v), end(v));
+  output_all(first, last);
 }
