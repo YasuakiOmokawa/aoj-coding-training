@@ -12,7 +12,7 @@ auto output_all = [](auto first, auto last) {
 
 int main()
 {
-  istreambuf_iterator<int> first(cin), last;
+  istream_iterator<int> first(cin), last;
 
   output_all(first, last);
 }
