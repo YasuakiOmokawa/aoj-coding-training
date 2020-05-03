@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <iterator>
 using namespace std;
 
 auto output_all = [](auto first, auto last) {
