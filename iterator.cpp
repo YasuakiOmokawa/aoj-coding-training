@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <vector>
 #include <iterator>
+#include <experimental/filesystem>
 using namespace std;
 
 auto output_all = [](auto first, auto last) {
@@ -13,7 +14,7 @@ auto output_all = [](auto first, auto last) {
 
 int main()
 {
-  istream_iterator<int> first(cin), last;
+  experimental::filesystem::directory_iterator first("./"), last;
 
   output_all(first, last);
 }
