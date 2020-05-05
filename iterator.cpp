@@ -14,6 +14,7 @@ auto output_all = [](auto first, auto last) {
 
 int main()
 {
+  // to use this, need to link with "-lstdc++fs"
   experimental::filesystem::directory_iterator first("./"), last;
 
   output_all(first, last);
