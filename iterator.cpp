@@ -5,17 +5,16 @@
 #include <experimental/filesystem>
 using namespace std;
 
-auto output_all = [](auto first, auto last) {
-  for (auto iter = first; iter != last; ++iter)
+auto output_all = [](auto first, auto last, auto output_iter) {
+  for (auto iter = first; iter != last; ++iter, ++output_iter)
   {
-    cout << *iter << "\n";
+    *output_iter = *iter;
   }
 };
 
 int main()
 {
-  // to use this, need to link with "-lstdc++fs"
-  experimental::filesystem::directory_iterator first("./"), last;
+  std::vector<int> v = {1, 2, 3, 4, 5};
 
-  output_all(first, last);
+  output_all(begin(v), end(v), ostream_iterator<int>(cout));
 }
