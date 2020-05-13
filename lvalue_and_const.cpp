@@ -5,11 +5,13 @@
 #include <experimental/filesystem>
 using namespace std;
 
+void assign_3(int x)
+{
+  x = 3;
+}
+
 int main()
 {
   int a = 1;
-  int b = 2;
-
-  b = a;
-  b = 3;
+  assign_3(a);
 }
