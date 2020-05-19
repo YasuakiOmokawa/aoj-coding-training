@@ -14,4 +14,5 @@ int main()
 {
   int a = 1;
   assign_3(a);
+  cout << a << "\n";
 }
