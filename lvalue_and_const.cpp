@@ -5,10 +5,11 @@
 #include <experimental/filesystem>
 using namespace std;
 
-void f(int &x)
-{
-  x = 3;
-}
+auto swap = [](auto &a, auto &b) {
+  auto temp = a;
+  a = b;
+  b = temp;
+};
 
 int main()
 {
