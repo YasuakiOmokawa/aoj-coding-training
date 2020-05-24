@@ -12,4 +12,12 @@ int main()
 
   const int y = 0;
   int const z = 0;
+
+  int &ref = x;
+  ++ref;
+
+  const int &const_ref = x;
+
+  // error
+  ++const_ref;
 }
