@@ -5,8 +5,18 @@
 #include <experimental/filesystem>
 using namespace std;
 
+void f(std::vector<int> v)
+{
+  cout << v.at(1234);
+}
+
 int main()
 {
+
+  // vector contain 10000 items
+  vector<int> v(10000);
+  f(v);
+
   int x = 0;
   x = 1;
 
@@ -23,7 +33,7 @@ int main()
   // constant type object
   const int w = 0;
   // error, not const
-  int &w_ref = w;
+  // int &w_ref = w;
   // ok, with const
   const int &w_cref = w;
 }
