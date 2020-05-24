@@ -5,7 +5,7 @@
 #include <experimental/filesystem>
 using namespace std;
 
-auto swap = [](auto &a, auto &b) {
+auto swap2 = [](auto &a, auto &b) {
   auto temp = a;
   a = b;
   b = temp;
@@ -14,6 +14,8 @@ auto swap = [](auto &a, auto &b) {
 int main()
 {
   int a = 1;
-  f(a);
+  int b = 100;
+  swap(a, b);
   cout << a << "\n";
+  cout << b << "\n";
 }
