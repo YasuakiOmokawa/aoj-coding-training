@@ -19,4 +19,11 @@ int main()
   // ok, enable const
   const int &cref = x;
   const int &const_ref = x;
+
+  // constant type object
+  const int w = 0;
+  // error, not const
+  int &w_ref = w;
+  // ok, with const
+  const int &w_cref = w;
 }
