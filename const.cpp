@@ -16,8 +16,7 @@ int main()
   int &ref = x;
   ++ref;
 
+  // ok, enable const
+  const int &cref = x;
   const int &const_ref = x;
-
-  // error
-  ++const_ref;
 }
