@@ -5,9 +5,9 @@
 #include <experimental/filesystem>
 using namespace std;
 
-void f(std::vector<int> v)
+void f(std::vector<int> const &v) // take prime of constance argument data
 {
-  cout << v.at(1234);
+  cout << v.at(1234) << "\n";
 }
 
 int main()
