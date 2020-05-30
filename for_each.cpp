@@ -14,7 +14,7 @@ auto print_all = [](auto first, auto last) {
 
 int main()
 {
-  vector<int> v = {1, 2, 3, 4, 5};
+  auto print = [](auto x) { cout << x; };
 
-  print_all(begin(v), end(v));
+  print(123);
 }
