@@ -19,4 +19,13 @@ int main()
 
   bool b = all_of(begin(v), end(v), [](auto value) { return false; });
   cout << b << "\n";
+
+  // any_of
+  vector<int> v2 = {1, 2, 3, 4, 5};
+  bool has_3 = any_of(begin(v2), end(v2), [](auto x) { return x == 3; });
+  cout << has_3 << "\n";
+
+  bool has_10 = any_of(begin(v2), end(v2), [](auto x) { return x == 10; });
+  cout << has_10 << "\n";
+
 };
