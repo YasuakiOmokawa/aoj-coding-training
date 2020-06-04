@@ -28,4 +28,17 @@ int main()
   bool has_10 = any_of(begin(v2), end(v2), [](auto x) { return x == 10; });
   cout << has_10 << "\n";
 
+  // hand-made any_of
+  auto any_of2 = [](auto first, auto last, auto pred) {
+    for (auto iter = first; iter != last; ++iter)
+    {
+      if (pred(*iter))
+        return true;
+    }
+    return false;
+  };
+
+  // test
+  bool has_11 = any_of2(begin(v2), end(v2), [](auto x) { return x == 11; });
+  cout << has_11 << "\n";
 };
