@@ -69,4 +69,19 @@ int main()
   };
   auto m_even = my_find_if(begin(pv), end(pv), is_even);
   cout << *m_even << "\n";
+
+  // copy out side of function
+  {
+    int value = 123;
+    auto f = [=] { return value; };
+    cout << f() << "\n";
+  }
+
+  // reference out side of function
+  {
+    int value = 123;
+    auto f = [&] { ++value; };
+    f();
+    cout << value << "\n";
+  }
 }
