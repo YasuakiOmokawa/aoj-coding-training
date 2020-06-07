@@ -40,4 +40,22 @@ int main()
   {
     cout << "Not found.\n";
   }
+
+  // predicate function
+  auto pred = [](auto const &value) -> bool {
+    return true;
+  };
+
+  vector<int> pv = {1, 3, 5, 7, 9, 11, 13, 14, 15, 16};
+  auto is_even = [](auto value) {
+    return value % 2 == 0;
+  };
+  auto is_odd = [](auto value) {
+    return value % 2 == 1;
+  };
+
+  auto even = find_if(begin(pv), end(pv), is_even);
+  cout << *even << "\n";
+  auto odd = find_if(begin(pv), end(pv), is_odd);
+  cout << *odd << "\n";
 }
