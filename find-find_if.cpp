@@ -11,4 +11,14 @@ int main()
 
   auto pos = find(begin(v), end(v), 3);
   cout << *pos << "\n";
+
+  auto no_pos = find(begin(v), end(v), 0);
+  if (no_pos != end(v))
+  {
+    cout << "Found.\n";
+  }
+  else
+  {
+    cout << "Not found.\n";
+  }
 }
