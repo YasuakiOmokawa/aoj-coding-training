@@ -58,4 +58,15 @@ int main()
   cout << *even << "\n";
   auto odd = find_if(begin(pv), end(pv), is_odd);
   cout << *odd << "\n";
+
+  auto my_find_if = [](auto first, auto last, auto pred) {
+    for (auto iter = first; iter != last; ++iter)
+    {
+      if (pred(*iter))
+        return iter;
+    }
+    return last;
+  };
+  auto m_even = my_find_if(begin(pv), end(pv), is_even);
+  cout << *m_even << "\n";
 }
