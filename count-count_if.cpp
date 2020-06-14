@@ -15,5 +15,15 @@ int main()
   auto my_count = [](auto first, auto last, auto value) {
     auto counter = 0u;
     for (auto i = first; i != last; ++i)
-  }
+    {
+      if (*i == value)
+        ++counter;
+    }
+    return counter;
+  };
+
+  auto b = my_count(begin(v), end(v), 1);
+  cout << b << "\n";
+
+  
 }
