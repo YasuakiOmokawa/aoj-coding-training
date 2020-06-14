@@ -25,5 +25,17 @@ int main()
   auto b = my_count(begin(v), end(v), 1);
   cout << b << "\n";
 
-  
+  auto count_if = [](auto first, auto last, auto pred) {
+    auto counter = 0u;
+    for (auto i = first; i != last; ++i)
+    {
+      if (pred(*i) != false)
+        ++counter;
+    }
+    return counter;
+  };
+
+  // expect return 1
+  auto count_even = count_if(begin(v), end(v), [](auto x) { return x % 2 == 0; });
+  cout << count_even << "\n";
 }
