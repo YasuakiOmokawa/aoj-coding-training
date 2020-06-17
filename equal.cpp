@@ -21,4 +21,15 @@ int main()
   {
     cout << e << endl;
   }
+
+  auto first = begin(a);
+  auto last = end(a);
+  auto size = distance(first, last);
+  auto size_from_next = distance(first + 1, last);
+  vector<long int> res_size = {size, size_from_next};
+  for (const auto &e : res_size)
+  {
+    cout << e << endl;
+  }
+
 }
