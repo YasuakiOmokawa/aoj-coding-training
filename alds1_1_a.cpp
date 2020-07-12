@@ -15,7 +15,7 @@ int main()
 
   for (int i = 1; i < n - 1; i++)
   {
-    cout << A[i] << "\n";
+    cout << A[i] << endl;
   }
 
   return 0;
