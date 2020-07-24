@@ -1,3 +1,4 @@
+// Insertion Sort
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -25,12 +26,14 @@ int main()
   {
     int v = A[i];
     int j = i - 1;
-    while (j >= 0 && A[i] > v)
+    while (j >= 0 && A[j] > v)
     {
       A[j + 1] = A[j];
       j--;
+      // cout << "prev_item_position -> " << j << ", ";
     }
     A[j + 1] = v;
+    // cout << "check_item_position -> " << v << ", ";
     print_value(A, n); // check
   }
 
