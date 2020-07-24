@@ -3,7 +3,8 @@
 #include <algorithm>
 using namespace std;
 
-auto print_value = [](auto array, int n) {
+void print_value(int *array, int n)
+{
   for (int i = 0; i < n; i++)
   {
     cout << array[i] << " ";
